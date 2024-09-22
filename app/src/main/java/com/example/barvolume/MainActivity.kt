@@ -11,6 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+// class main activity sebuah class inheritance ke superclass bernama AppCompatActivity
+//merupakan kelas dasar yang mengatur fungsi dasar activity supaya tetap berjalan pada versi android lama
+//contohnya seperti pengaturan tema dan app bar kalau view on click listener buat mantau kejadian klik pada komponen tombol (button)
+
 class MainActivity : AppCompatActivity(), View.OnKeyListener, View.OnClickListener {
     private lateinit var edtWidth: EditText
     private lateinit var edtHeight: EditText
@@ -24,6 +28,8 @@ class MainActivity : AppCompatActivity(), View.OnKeyListener, View.OnClickListen
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //metode Oncreate merupakan metode utama yang pertama kali di panggil pada activity
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
